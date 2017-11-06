@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'rooms/login'
+
   get 'welcome/index'
   
   root 'welcome#index'
