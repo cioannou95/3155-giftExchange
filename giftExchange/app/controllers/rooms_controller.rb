@@ -1,48 +1,57 @@
 class RoomsController < ApplicationController
+
   def login
   end
   
   def new
-    @rooms = Rooms.new
+  #  @room = Room.new
   end
   
+  def index
+    @room = Room.all
+  end
+
   def create
-    @rooms = Rooms.new(rooms_params)
+    @room = Room.new(room_params)
     
-    if @rooms.save
-      redirect_to @article
+    if @room.save
+      redirect_to @room
     else
       render 'new'
     end
   end
-  
+ 
   def show
-    @rooms = Rooms.find(params[:id]) #used "id" here but should probably be changed to "roomcode"
+    @room = Room.find(params[:id]) #used "id" here but should probably be changed to "roomcode"
   end
   
   def edit
-    @rooms = Rooms.find(params[:id])
+    @room = Room.find(params[:id])
   end 
   
   def update
-    @rooms = Rooms.find(params[:id])
-    if @rooms = Rooms.find(params[:id])
-      redirect_to @rooms
+    @room = Room.find(params[:id])
+    if @room = Room.update(room_params)
+      redirect_to @room
     else
       render 'edit'
     end
   end
   
   def destroy
-    @rooms = Rooms.find(params[:id])
-    @rooms.destroy
+    @room = Room.find(params[:id])
+    @room.destroy
     
-    redirect_to rooms_path #probably needs to be changed later
+    redirect_to room_path #probably needs to be changed later
   end
-  
+=begin 
   private 
-    def rooms_params
-      params.require(:rooms).permit(:roomcode, :password)
+    def room_params
+      params.require(:room).permit(:roomcode, :password)
     end
-  
+=end 
 end
+
+
+
+
