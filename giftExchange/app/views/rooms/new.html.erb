@@ -1,2 +1,17 @@
-<h1>New Room</h1>
+<h1>Create a New Room</h1>
 <p>Must rename view as newroom</p>
+<%= form_for :room, url: rooms_path do |f| %>
+  <p>
+    <%= f.label :roomcode %><br>
+    <%= f.text_field :password %>
+  </p>
+ 
+  <p>
+    <%= f.label :RoomPassword %><br>
+    <%= f.text_field :text %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

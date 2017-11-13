@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   #get 'rooms/login'
 
-  get 'welcome/index'
+  get 'new/index'
+  
   
   resources :rooms 
   
-  root 'welcome#index'
+  root 'rooms#login'
+  
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
