@@ -4,7 +4,7 @@
 <h1>Gift Exchange Project</h1>
 <p>Winter is Coming</p>
 
-<%= link_to 'New User', new_user_path(@user) %>
+
 
 <img src="https://78.media.tumblr.com/80cb1399d54469264f27a2f592acab4f/tumblr_ov2nu1UkSL1w8hozzo1_500.gif">
 
@@ -16,8 +16,11 @@
                     <input type="password" name= "password" id="password" required><br1>
                 <input type="button" value="Login" id="GeneralButton">
             <input type="button" value="Create Account", id="GeneralButton"><br>
+            <%= link_to 'Create Account', new_user_path(@user) %>
     </form>
 </h3>
+
     <div id="snow"></div>
+    
 </html>
 
