@@ -4,7 +4,7 @@ class RoomsController < ApplicationController
   end
   
   def new
-   # @room = Room.new
+   @room = Room.new
   end
   
   def index
@@ -12,11 +12,11 @@ class RoomsController < ApplicationController
   end
 
   def create
-    @room = Room.new(room_params)
+   # @room = Room.new(room_params)
     
-    @room.save
-      redirect_to @room
-=begin
+   # @room.save
+    #  redirect_to @room
+
     @room = Room.new(room_params)
     
     if @room.save
@@ -24,7 +24,7 @@ class RoomsController < ApplicationController
     else
       render 'new'
     end
-=end
+
   end
  
   def show
