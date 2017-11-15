@@ -3,6 +3,7 @@ class RoomsController < ApplicationController
   def login
   end
   
+
   def new
    @room = Room.new
   end
@@ -55,6 +56,7 @@ class RoomsController < ApplicationController
     def room_params
       params.require(:room).permit(:roomcode, :roompassword)
     end
+
 
 end
 
