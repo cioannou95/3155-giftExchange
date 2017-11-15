@@ -48,7 +48,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     @room.destroy
     
-    redirect_to room_path #probably needs to be changed later
+    redirect_to rooms_path #probably needs to be changed later
   end
 
   private 
