@@ -12,7 +12,10 @@ class RoomsController < ApplicationController
   end
 
   def create
-    render plain: params[:article].inspect
+    @room = Room.new(room_params)
+    
+    @room.save
+      redirect_to @room
 =begin
     @room = Room.new(room_params)
     
@@ -47,12 +50,12 @@ class RoomsController < ApplicationController
     
     redirect_to room_path #probably needs to be changed later
   end
-=begin 
+
   private 
     def room_params
-      params.require(:room).permit(:roomcode, :password)
+      params.require(:room).permit(:roomcode, :roompassword)
     end
-=end 
+
 end
 
 

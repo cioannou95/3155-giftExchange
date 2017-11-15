@@ -3,12 +3,12 @@
 <%= form_for :room, url: rooms_path do |f| %>
   <p>
     <%= f.label :roomcode %><br>
-    <%= f.text_field :password %>
+    <%= f.text_field :roomcode %> <!-- change back to password only allow Admin to see this field-->
   </p>
  
   <p>
-    <%= f.label :RoomPassword %><br>
-    <%= f.text_field :text %>
+    <%= f.label :roompassword %><br>
+    <%= f.text_field :roompassword %>
   </p>
  
   <p>
