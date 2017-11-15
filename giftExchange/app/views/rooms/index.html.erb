@@ -1,0 +1,20 @@
+<h1>Listing Articles</h1>
+
+
+<table>
+    <tr>
+        <th>roomcode</th>
+        <th>roompassword</th>
+    </tr>
+</table>
+
+
+
+<% @rooms.each do |room| %>
+    <tr>
+        <td><%= room.roomcode %></td>
+        <td><%= room.roompassword %></td>
+        <td><%= link_to 'Show', room_path(room) %></td>
+    </tr>
+<% end %>
+</table>

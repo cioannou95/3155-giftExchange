@@ -8,7 +8,7 @@ class RoomsController < ApplicationController
   end
   
   def index
-    @room = Room.all
+    @rooms = Room.all
   end
 
   def create
