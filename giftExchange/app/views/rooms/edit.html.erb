@@ -1,0 +1,38 @@
+<h1>Editing articles</h1>
+
+
+<%= form_for :room, url: room_path(@room), method: :patch do |f| %>
+
+    
+    <% if @room.errors.any? %>
+        <div id = "error_explantion">
+            <h2>
+                <%= pluralize(@room.errors.count, "error") %> prohibited
+                this room could not be saved because:
+            
+            </h2>
+            <ul>
+                <% @article.error.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+        <% end %>
+        
+
+  <p>
+    <%= f.label :roomcode %><br>
+    <%= f.text_field :roomcode %> <!-- change back to password only allow Admin to see this field-->
+  </p>
+ 
+  <p>
+    <%= f.label :roompassword %><br>
+    <%= f.text_field :roompassword %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', rooms_path %>

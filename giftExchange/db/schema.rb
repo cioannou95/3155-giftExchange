@@ -12,6 +12,13 @@
 
 ActiveRecord::Schema.define(version: 20171115004844) do
 
+  create_table "rooms", force: :cascade do |t|
+    t.string "roomcode"
+    t.string "roompassword"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "fname"
     t.string "lname"
