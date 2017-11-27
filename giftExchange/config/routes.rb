@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
   resources :rooms 
   
-  root 'rooms#login'
+  #root 'rooms#login'
   
 
   resources :users
