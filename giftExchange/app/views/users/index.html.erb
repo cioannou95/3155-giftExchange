@@ -19,6 +19,11 @@
             <td><%= user.address %></td>
             <td><%= user.wish_list %></td>
             <td><%= link_to 'Show', user_path(user) %></td>
+            <td><%= link_to 'Edit', edit_user_path(user) %></td>
+            <td><%= link_to 'Destroy', 
+                                    user_path(user),
+                                    method: :delete,
+                                    data: { confirm: 'Why you tryna kill my mans?' } %></td>
         </tr>
     <% end %>
 </table>
