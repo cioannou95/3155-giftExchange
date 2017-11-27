@@ -1,0 +1,29 @@
+<h1>Listing Users</h1>
+<%= link_to 'New User', new_user_path %>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Wish List</th>
+    </tr>
+    
+    <% @users.each do |user| %>
+        <tr>
+            <td><%= user.fname %></td>
+            <td><%= user.lname %></td>
+            <td><%= user.username %></td>
+            <td><%= user.email %></td>
+            <td><%= user.address %></td>
+            <td><%= user.wish_list %></td>
+            <td><%= link_to 'Show', user_path(user) %></td>
+            <td><%= link_to 'Edit', edit_user_path(user) %></td>
+            <td><%= link_to 'Destroy', 
+                                    user_path(user),
+                                    method: :delete,
+                                    data: { confirm: 'Why you tryna kill my mans?' } %></td>
+        </tr>
+    <% end %>
+</table>

@@ -1,17 +1,26 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    
 <h1>Gift Exchange Project</h1>
-<p>Be entertained by this donkey</p>
+<p>Winter is Coming</p>
 
-<%= link_to 'New User', new_user_path(@user) %>
 
-<img src="http://cdn.playbuzz.com/cdn/cddfc2e9-3f3d-440a-8ede-795ff6b38f09/a10210e5-5edd-47dd-823d-3496f00b4e4b.gif">
-<div id="snow"></div>
-<form>
-<form action="/action_page.php">
-    Login:<br>
-    <input type="text" login = "username"><br>
-    Password:<br>
-    <input type= "text" password="password"><br><br>
-    <input type="login" value="Login"><br><br>
-    <input type="create" value="Create">
-</form>
+
+<img src="https://78.media.tumblr.com/80cb1399d54469264f27a2f592acab4f/tumblr_ov2nu1UkSL1w8hozzo1_500.gif">
+
+<h3>
+    <form action="/action_page.php">
+        <label for="login"> Login </label>
+            <input type="text" name= "login" id="login" required><br1>
+                <label for="password">Password</label>
+                    <input type="password" name= "password" id="password" required><br1>
+                <input type="button" value="Login" id="GeneralButton">
+            <input type="button" value="Create Account", id="GeneralButton"><br>
+            <%= link_to 'Create Account', new_user_path(@user) %>
+    </form>
+</h3>
+
+    <div id="snow"></div>
+    
+</html>
 

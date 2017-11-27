@@ -8,13 +8,28 @@ body {
 }
 h1 {
     color: white;
+    text-align: center;
     font-family: "Times New Roman", Times, serif;
     text-align: center;
+}
+h3 {
+  color: white;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
 }
 p {
     color: white;
     font-family: "Times New Roman", Times, serif;
     text-align: center;
+}
+
+#GeneralButton{
+  padding: 5px 20px;
+  font-size: 27px;
+}
+br1 {
+  display: block;
+  margin: 10px 0;
 }
 #snow{
 	background: none;
