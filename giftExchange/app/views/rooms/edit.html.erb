@@ -9,10 +9,9 @@
             <h2>
                 <%= pluralize(@room.errors.count, "error") %> prohibited
                 this room could not be saved because:
-            
             </h2>
             <ul>
-                <% @article.error.full_messages.each do |msg| %>
+                <% @room.errors.full_messages.each do |msg| %>
                     <li><%= msg %></li>
                 <% end %>
             </ul>
