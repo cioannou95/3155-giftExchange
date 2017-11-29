@@ -6,7 +6,7 @@ Feature: Add a new user
   
   Scenario: As a secret santa I want to be able to navigate from the home page to the New User form
     Given I am on the home page
-    When I click on the "Create Account" link
+    When I click on the "Create Account" button
     Then I should be on the "Create Account" page
     And I should see the "First Name" field
     And I should see the "Last Name" field
