@@ -27,14 +27,23 @@
     </p>
     
     <p>
-        <%= f.label :name, 'Username' %><br>
+        <%= f.label :username, 'Username' %><br>
         <%= f.text_field :username %>
     </p>
     
     <p>
         <%= f.label :password, 'Password' %><br>
-        <%= f.text_field :password %>
+        <%= f.password_field :password %>
     </p>
+    
+    <!-- If we want password confirmation, use the below code.
+        I Found it here: https://stackoverflow.com/questions/4011685/how-to-create-password-and-confirmation-when-using-form-for
+        Don't forget to add "< % =" to enable the ruby code below. -JoeM.
+    <p>
+        f.label :password_confirmation, 'Confirm Password' %><br>
+        f.password_field :password_confirmation %>
+    </p>
+    -->
     
     <p>
         <%= f.label :email, 'Email' %><br>
@@ -56,3 +65,5 @@
     </p>
 <% end %>
 <%= link_to 'Back', users_path %>
+
+<div id="snow"></div>

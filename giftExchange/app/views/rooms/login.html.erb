@@ -1,3 +1,15 @@
-<h1>Rooms Login Crash Pad</h1>
+<h1>Rooms Login</h1>
 <p>Find me in app/views/rooms/login.html.erb</p>
 
+
+
+<h1>
+    <form action='/action_page.php'>
+        <label for='room login'> Login </label>
+            <input type= 'string' name = 'roomcode' id = 'roomcode' required><br1> 
+        <label for='roompassword'> Room Password</label>
+            <input type= 'string' name ='roompassword' id = 'roompassword' required><br1>
+        <input type='button' value='Login', id="GeneralButton"><br>
+        <%= link_to 'New room', new_room_path %>
+    </form>
+</h1>   
