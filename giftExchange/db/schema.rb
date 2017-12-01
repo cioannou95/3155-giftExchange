@@ -36,8 +36,6 @@ ActiveRecord::Schema.define(version: 20171130203133) do
     t.string "email"
     t.text "address"
     t.text "wish_list"
-    t.integer "room_id"
-    t.index ["room_id"], name: "index_users_on_room_id"
   end
 
 end
