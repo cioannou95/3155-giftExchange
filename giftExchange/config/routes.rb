@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
-  get 'rooms/login'
 
-  get 'new/index'
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure',  to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
   
   
-  resources :rooms 
+  resources :sessions, only: [:create, :destroy]
+  get 'welcome/index'
+  
+  
+  resources :rooms #do
+  #resources :comments
   
   #root 'rooms#login'
-  
+  #end
 
   resources :users
   
