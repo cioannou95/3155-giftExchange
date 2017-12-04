@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171130203133) do
+ActiveRecord::Schema.define(version: 20171204210225) do
 
   create_table "rooms", force: :cascade do |t|
     t.string "roomcode"
@@ -36,6 +36,11 @@ ActiveRecord::Schema.define(version: 20171130203133) do
     t.string "email"
     t.text "address"
     t.text "wish_list"
+    t.string "provider"
+    t.string "uid"
+    t.string "name"
+    t.string "oauth_token"
+    t.string "oauth_expires_at"
   end
 
 end
