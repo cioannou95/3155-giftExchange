@@ -21,3 +21,15 @@ end
 Given("I am on the create Xchange room page") do
   visit rooms_path
 end
+#create user testing
+Given("I am on the {string} page") do |page_name|
+  visit form_for
+end
+
+Given("I fill in {string} with {string}") do |field_name, user_info|
+  fill_in field_name, :with => user_info
+end
+
+Then("I should see {string}") do |info|
+  expect(page).to have_content(info)
+end
