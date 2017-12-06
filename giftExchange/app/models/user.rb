@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_and_belongs_to_many :rooms
+    belongs_to :room
     validates :fname, presence: true, length: {minimum: 1}
     validates :lname, presence: true, length: {minimum: 1}
     validates :username, presence: true, length: {minimum: 1}
