@@ -12,21 +12,9 @@
 </p>
 
 <h2>Users</h2>
-<% @room.matches.each do |match| %>
-    <p>
-        <%= match.name %>
-    </p>
-
-<% end %>
+<%= render @room.matches %>
 
 <h2>Add a User</h2>
-<%= form_for([@room, @room.matches.build]) do |f| %>
-    <p>
-        <%= f.label :name %><br>
-        <%= f.text_field :name %>
-    </p>
-    
-    <p>
-        <%= f.submit %>
-    </p>
-<% end %>
+<%= render 'matches/form' %>
+
+<%= link_to "Room List", rooms_path %>
