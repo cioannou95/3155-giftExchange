@@ -1,4 +1,11 @@
 class UsersController < ApplicationController
+def create
+    @room = Room.find(params[:room_id])
+    @user = @room.users.create(user_params)
+    redirect_to room_path(@room)
+end
+
+=begin
     def index
         @users = User.all
     end
@@ -42,8 +49,9 @@ class UsersController < ApplicationController
         redirect_to users_path
     end
 end
-
+=end
+end
 private
     def user_params
-        params.require(:user).permit(:fname, :lname, :username, :password, :email, :address, :wish_list)
+        params.require(:user).permit(:fname, :lname) # :username, :password, :email, :address, :wish_list)
     end

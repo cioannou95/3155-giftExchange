@@ -7,15 +7,18 @@ Rails.application.routes.draw do
   
   resources :sessions, only: [:create, :destroy]
   get 'welcome/index'
+  resources :rooms do
+    resources :matches
+  end
   
   
-  resources :rooms #do
+  #resources :rooms #do
   #resources :comments
   
   #root 'rooms#login'
   #end
 
-  resources :users
+  #resources :users
   
   root 'welcome#index'
   
