@@ -4,12 +4,14 @@ Rails.application.routes.draw do
   get 'new/index'
   
   
-  resources :rooms 
+  resources :rooms do
+    resources :users
+  end
   
   #root 'rooms#login'
   
 
-  resources :users
+  #resources :users
   
   root 'welcome#index'
   
