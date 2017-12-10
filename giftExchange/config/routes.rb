@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
   
   resources :rooms do
-    resources :users
+    resources :matches
   end
   
   #root 'rooms#login'
