@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy]
   get 'welcome/index'
   resources :rooms do
+    collection do
+      get 'sortNames'
+    end
     resources :matches
   end
-  
   
   #resources :rooms #do
   #resources :comments
