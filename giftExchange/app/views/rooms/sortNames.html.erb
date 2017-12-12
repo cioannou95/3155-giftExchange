@@ -1,10 +1,15 @@
-
+ <%= button_to "Home Page", welcome_index_path, :method => "get"%>
   <strong>Fuck</strong>
+ 
 
   <table>
     <tr>
     <th><% @names.each do |t| %>
-    <%= t %>-----><br>
+    <%= t %><br>
+    <% end %></th>
+    <th><% @names.each do |r| %>
+    <%= "------->" %><br>
+    
     <% end %></th>
     
    <th> <% @matchedNames.each do |m| %>
