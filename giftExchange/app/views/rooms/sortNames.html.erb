@@ -1,5 +1,18 @@
-<p>
-    <strong>Fuck</strong>
+
+  <strong>Fuck</strong>
+
+  <table>
+    <tr>
+    <th><% @names.each do |t| %>
+    <%= t %>-----><br>
+    <% end %></th>
     
+   <th> <% @matchedNames.each do |m| %>
+    <%= m %><br>
+    <% end %></th>
     
-</p>
+    </tr>
+    
+</table>
+
+<div id="snow"></div>
