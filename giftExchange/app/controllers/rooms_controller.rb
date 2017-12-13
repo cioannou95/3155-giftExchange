@@ -2,6 +2,8 @@ class RoomsController < ApplicationController
 
   def login
   end
+<<<<<<< HEAD
+=======
   
   def sortNames
     #@room = Room.find(params[:id])
@@ -36,7 +38,7 @@ class RoomsController < ApplicationController
     end
 
   end
-
+>>>>>>> 3a268fe6f0a611523f9f97bd4350153eb57dd6ec
 
   def new
    @room = Room.new

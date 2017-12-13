@@ -4,11 +4,6 @@ Feature: Edit an Exchange Room
   So that I can manage my secret santa gifts
   I want to be able to edit an exchange room
   
-  Scenario: As a secret santa I want to get to show
-     Given I am on the create Xchange room page
-    When I click on the "show" link
-    Then I should see "Room code: test"
-    
   Scenario: As a secret santa I want to be able to edit an exchange room
      Given I am on the create Xchange room page
     When I click on the "Edit" link
