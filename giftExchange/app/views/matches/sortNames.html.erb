@@ -14,7 +14,9 @@
    <th> <% @matchedNames.each do |m| %>
     <%= m.name %><br>
     <% end %></th>
-    
+     <p>
+         <%= button_to "Back", room_path, id: "back", :method => "get" %>
+    </p>
     </tr>
     
 </table>

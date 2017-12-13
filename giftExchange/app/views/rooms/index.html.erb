@@ -6,7 +6,6 @@
 <table>
     <tr>
         <th>Room Code</th>
-        <th>Room Password</th>
     </tr>
     
        
@@ -17,7 +16,6 @@
 <% @rooms.each do |room| %>
     <tr>
         <td><%= room.roomcode %></td>
-        <td><%= room.roompassword %></td>
         <td><%= link_to 'Show', room_path(room) %></td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>
         <td><%= link_to 'Destroy', 

@@ -7,6 +7,8 @@
     
     <p>
         <%= button_to "Add User", rooms_path, id: "add_user", :method => "get" %>
+        <%= button_to 'Match Names', sortNames_room_match_path(@room), :method => "get" %>
+        
     </p>
     
     <p>
@@ -17,6 +19,7 @@
     
 <% end %>
 
-<%= button_to 'Match Names', sortNames_room_match_path(@room), :method => "get" %>
+
+
 
 
