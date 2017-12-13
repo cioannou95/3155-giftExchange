@@ -1,0 +1,22 @@
+ <%= button_to "Home Page", welcome_index_path, :method => "get"%>
+<h3>
+  <table>
+    <tr>
+    <th><% @names.each do |t| %>
+    <%= t %><br>
+    <% end %></th>
+    <h1>Matches</h1>
+    <th><% @names.each do |r| %>
+    <%= "------------------------->" %><br>
+    
+    <% end %></th>
+    
+   <th> <% @matchedNames.each do |m| %>
+    <%= m %><br>
+    <% end %></th>
+    
+    </tr>
+    
+</table>
+</h3>
+<div id="snow"></div>

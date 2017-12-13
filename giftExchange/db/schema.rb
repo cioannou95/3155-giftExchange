@@ -37,13 +37,11 @@ ActiveRecord::Schema.define(version: 20171210062040) do
     t.string "email"
     t.text "address"
     t.text "wish_list"
-    t.integer "room_id"
     t.string "provider"
     t.string "uid"
     t.string "name"
     t.string "oauth_token"
     t.string "oauth_expires_at"
-    t.index ["room_id"], name: "index_users_on_room_id"
   end
 
 end

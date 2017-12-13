@@ -2,6 +2,43 @@ class RoomsController < ApplicationController
 
   def login
   end
+<<<<<<< HEAD
+=======
+  
+  def sortNames
+    #@room = Room.find(params[:id])
+    @statement = "Hello World"
+  
+    value = 0
+    #counter to determine when algorithm is complete
+    
+    @names = ["nik", "joe", "roa", "dino", "alex", "kent", "tom", "taylor", "erin", "tessa"]
+    #this array needs to be populated from the database
+    
+    until value == @names.length
+      value = 0
+      @matchedNames = @names.shuffle
+      #shuffles names array into new array named matchedNames
+
+      @names.zip @matchedNames
+
+      @names.zip(@matchedNames).each do |names, matchedNames|
+        #print @names, " ", @matchedNames, "\n"
+        if names != matchedNames
+            value += 1
+            #adds one to value if names at given location don't match between arrays
+        end
+      end
+    end
+
+
+    #prints out arrays
+    @matchedNames.each do |x|
+      puts x
+    end
+
+  end
+>>>>>>> 3a268fe6f0a611523f9f97bd4350153eb57dd6ec
 
   def new
    @room = Room.new

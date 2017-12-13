@@ -1,16 +1,23 @@
 <%= form_for([@room, @room.matches.build]) do |f| %>
+    <form action="/action_page.php" method="get">
     <p>
         <%= f.label :name %><br>
         <%= f.text_field :name %>
     </p>
     
     <p>
-        <%= f.submit %>
+        <%= button_to "Add User", rooms_path, id: "add_user", :method => "get" %>
     </p>
-    
+    </form>
     
     
 <% end %>
 
+<<<<<<< HEAD
 <%= link_to 'Match Names', sortNames_room_match_path(@room) %>
+=======
+
+<%= button_to 'Match Names', sortNames_rooms_path, :method => "get" %>
+
+>>>>>>> 3a268fe6f0a611523f9f97bd4350153eb57dd6ec
 

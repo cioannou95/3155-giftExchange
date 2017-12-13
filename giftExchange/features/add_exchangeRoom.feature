@@ -7,14 +7,14 @@ Feature: Add an exchange room
   
   Scenario: As a secret santa I want to be able to navigate from the join page to the create an exchange room page
     Given I am on the create Xchange room page
-    When I click on the "New Room" link
+    When I click on the "New Room" button
     Then I should be on the "Create a New Room" page
     And I should see the "Room Code" field
     And I should see the "Room Password" field
 
   Scenario: As a secret santa I want to be able to create an exchange room
     Given I am on the create Xchange room page
-    When I click on the "New Room" link
+    When I click on the "New Room" button
     And I fill in "Room Code" with "Test Room"
     And I fill in "Room Password" with "password"
     When I click on the "Save Room" button
