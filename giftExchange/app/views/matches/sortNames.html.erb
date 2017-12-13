@@ -1,12 +1,11 @@
 <p>
-    <% @names.each do |t| %>
-    <%= t %>
+    
+    <% @matches.each do |k| %>
+    <%= k.name %>
     <% end %>
     
-    <br>
-    
-    <% @matchedNames.each do |m| %>
-    <%= m %>
+    <% @matchedNames.each do |g| %>
+    <%= g.name %>
     <% end %>
     
 </p>

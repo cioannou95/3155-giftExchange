@@ -13,29 +13,35 @@ class MatchesController < ApplicationController
     end
     
     def sortNames
-    @room = Room.find(params[:id])
+        @room = Room.find(params[:room_id])
+        
+        value = @room.id
+        
+        #@matches = Match.group(:room_id)
+        @matches = Match.where(room_id: value)
+        
+        value = 0
+        #counter to determine when algorithm is complete
     
-    value = 0
-    #counter to determine when algorithm is complete
+        #@names = ["nik", "joe", "roa", "dino", "alex", "kent", "tom", "taylor", "erin", "tessa"]
+        #this array needs to be populated from the database
     
-    @names = ["nik", "joe", "roa", "dino", "alex", "kent", "tom", "taylor", "erin", "tessa"]
-    #this array needs to be populated from the database
-    
-    until value == @names.length
-      value = 0
-      @matchedNames = @names.shuffle
-      #shuffles names array into new array named matchedNames
+        until value == @matches.length
+            value = 0
+            @matchedNames = @matches.shuffle
+            #shuffles names array into new array named matchedNames
 
-      @names.zip @matchedNames
+            @matches.zip @matchedNames
 
-      @names.zip(@matchedNames).each do |names, matchedNames|
-        #print names, " ", matchedNames, "\n"
-        if names != matchedNames
-            value += 1
-            #adds one to value if names at given location don't match between arrays
+            @matches.zip(@matchedNames).each do |matches, matchedNames|
+            #print names, " ", matchedNames, "\n"
+            
+                if matches != matchedNames
+                    value += 1
+                    #adds one to value if names at given location don't match between arrays
+                end
+            end
         end
-      end
-    end
     
   end
     
