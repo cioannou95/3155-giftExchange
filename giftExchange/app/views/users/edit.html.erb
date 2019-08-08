@@ -1,8 +1,8 @@
-<h1>Create Account</h1>
-
-<%= form_for :user, url: users_path do |f| %>
-
-    <% if @user.errors.any? %>
+<h1>Editing User</h1>
+ 
+<%= form_for :user, url: user_path(@user), method: :patch do |f| %>
+ 
+  <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2>
         <%= pluralize(@user.errors.count, "error") %> prohibited
@@ -15,8 +15,8 @@
       </ul>
     </div>
   <% end %>
-    
-    <p>
+ 
+  <p>
         <%= f.label :fname, 'First Name' %><br>
         <%= f.text_field :fname %>
     </p>
@@ -27,23 +27,14 @@
     </p>
     
     <p>
-        <%= f.label :username, 'Username' %><br>
+        <%= f.label :name, 'Username' %><br>
         <%= f.text_field :username %>
     </p>
     
     <p>
         <%= f.label :password, 'Password' %><br>
-        <%= f.password_field :password %>
+        <%= f.text_field :password %>
     </p>
-    
-    <!-- If we want password confirmation, use the below code.
-        I Found it here: https://stackoverflow.com/questions/4011685/how-to-create-password-and-confirmation-when-using-form-for
-        Don't forget to add "< % =" to enable the ruby code below. -JoeM.
-    <p>
-        f.label :password_confirmation, 'Confirm Password' %><br>
-        f.password_field :password_confirmation %>
-    </p>
-    -->
     
     <p>
         <%= f.label :email, 'Email' %><br>
@@ -59,11 +50,12 @@
         <%= f.label :wish_list, 'Wish List' %><br>
         <%= f.text_area :wish_list %>
     </p>
-    
-    <p>
-        <%= f.submit %>
-    </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
 <% end %>
+ 
 <%= link_to 'Back', users_path %>
-
 <div id="snow"></div>

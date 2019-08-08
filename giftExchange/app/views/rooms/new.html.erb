@@ -15,16 +15,14 @@
       </ul>
     </div>
   <% end %>
-  
-
   <p>
-    <%= f.label :roomcode %><br>
+    <%= f.label :roomcode, "Room Code" %><br>
     <%= f.text_field :roomcode %> <!-- change back to password only allow Admin to see this field-->
   </p>
  
   <p>
-    <%= f.label :roompassword %><br>
-    <%= f.text_field :roompassword %>
+    <%= f.label :roompassword, "Room Password" %><br>
+    <%= f.password_field :roompassword %>
   </p>
  
   <p>
@@ -32,4 +30,6 @@
   </p>
 <% end %>
 
-<%= link_to 'Back', rooms_path %>
+<%= button_to 'Back', rooms_path, id: "back", :method => "get" %>
+
+<div id="snow"></div>

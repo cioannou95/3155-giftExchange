@@ -1,11 +1,14 @@
-<h1>Listing Articles</h1>
-<%= link_to 'New room', new_room_path %>
+<h1>Listing Rooms</h1>
+<h2><%= button_to "Home Page", welcome_index_path, :method => "get"%>
+    <%= button_to 'New Room', new_room_path, :method => "get" %>
+</h2>
 
 <table>
     <tr>
-        <th>roomcode</th>
-        <th>roompassword</th>
+        <th>Room Code</th>
     </tr>
+    
+       
 
 
 
@@ -13,7 +16,6 @@
 <% @rooms.each do |room| %>
     <tr>
         <td><%= room.roomcode %></td>
-        <td><%= room.roompassword %></td>
         <td><%= link_to 'Show', room_path(room) %></td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>
         <td><%= link_to 'Destroy', 
@@ -22,4 +24,6 @@
                                     data: {confirm: 'U mad bro?' } %></td>
     </tr>
 <% end %>
+    <div id="snow"></div>
+
 </table>

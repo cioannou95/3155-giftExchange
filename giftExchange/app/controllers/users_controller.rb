@@ -1,20 +1,57 @@
 class UsersController < ApplicationController
+def create
+    @room = Room.find(params[:room_id])
+    @user = @room.users.create(user_params)
+    redirect_to room_path(@room)
+end
+
+=begin
+    def index
+        @users = User.all
+    end
+    
     def show
         @user = User.find(params[:id])
     end
     
     def new
+        @user = User.new
     end
     
     def create
         @user = User.new(user_params)
         
-        @user.save
-        redirect_to @user
+        if @user.save
+            redirect_to @user
+        else
+            render 'new'
+        end
+    end
+    
+    def edit
+        @user = User.find(params[:id])
+    end
+    
+    def update
+        @user = User.find(params[:id])
+        
+        if @user.update(user_params)
+            redirect_to @user
+        else
+            render 'edit'
+        end
+    end
+    
+    def destroy
+        @user = User.find(params[:id])
+        @user.destroy
+        
+        redirect_to users_path
     end
 end
-
+=end
+end
 private
     def user_params
-        params.require(:user).permit(:fname, :lname, :username, :password, :email, :address, :wish_list)
+        params.require(:user).permit(:fname, :lname) # :username, :password, :email, :address, :wish_list)
     end

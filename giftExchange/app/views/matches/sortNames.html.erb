@@ -1,0 +1,24 @@
+ <%= button_to "Home Page", welcome_index_path, :method => "get"%>
+<h3>
+  <table>
+    <tr>
+    <th><% @matches.each do |t| %>
+    <%= t.name %><br>
+    <% end %></th>
+    <h1>Matches</h1>
+    <th><% @matches.each do |r| %>
+    <%= "------------------------->" %><br>
+    
+    <% end %></th>
+    
+   <th> <% @matchedNames.each do |m| %>
+    <%= m.name %><br>
+    <% end %></th>
+     <p>
+         <%= button_to "Back", room_path, id: "back", :method => "get" %>
+    </p>
+    </tr>
+    
+</table>
+</h3>
+<div id="snow"></div>

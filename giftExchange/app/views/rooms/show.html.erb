@@ -1,13 +1,15 @@
+<%= button_to "Home Page", welcome_index_path, :method => "get"%>
 <p>
-    <strong>Room code:</strong>
+    <strong>Room Name:</strong>
     <%= @room.roomcode %>
     
 </p>
 
+<h2>Users</h2>
+<%= render @room.matches %>
 
-<p>
-    <strong>Room Password:</strong>
-    <%= @room.roompassword %>
-</p>
+<h2>Add a User</h2>
 
-<%= link_to 'Room List', rooms_path %>
+<%= render 'matches/form' %>
+
+<div id="snow"></div>

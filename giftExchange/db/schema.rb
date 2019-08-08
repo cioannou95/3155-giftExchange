@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171115004844) do
+ActiveRecord::Schema.define(version: 20171210062040) do
+
+  create_table "matches", force: :cascade do |t|
+    t.string "name"
+    t.integer "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_matches_on_room_id"
+  end
 
   create_table "rooms", force: :cascade do |t|
     t.string "roomcode"
@@ -29,6 +37,13 @@ ActiveRecord::Schema.define(version: 20171115004844) do
     t.string "email"
     t.text "address"
     t.text "wish_list"
+    t.integer "room_id"
+    t.string "provider"
+    t.string "uid"
+    t.string "name"
+    t.string "oauth_token"
+    t.string "oauth_expires_at"
+    t.index ["room_id"], name: "index_users_on_room_id"
   end
 
 end

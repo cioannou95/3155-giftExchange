@@ -1,3 +1,7 @@
+<h1>List of Users</h1>
+
+<%= form_for :user, url: users_path do |f| %>
+
 <p>
     <strong>First Name:</strong>
     <%= @user.fname %>
@@ -32,3 +36,8 @@
     <strong>Wish List:</strong>
     <%= @user.wish_list %>
 </p>
+<%= link_to 'User List', users_path %>
+
+<div id="snow"></div>
+
+<% end %>

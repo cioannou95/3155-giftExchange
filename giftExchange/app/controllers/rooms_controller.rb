@@ -2,7 +2,6 @@ class RoomsController < ApplicationController
 
   def login
   end
-  
 
   def new
    @room = Room.new

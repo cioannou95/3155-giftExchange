@@ -1,0 +1,7 @@
+<p>
+    <%= match.name %>
+
+    <%= link_to 'Remove', [match.room, match],
+                         method: :delete,
+                         data: { confirm: 'Were they naughty?' } %>
+</p>

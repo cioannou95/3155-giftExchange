@@ -1,0 +1,22 @@
+<h1>Join Existing Xchange Room</h1>
+
+<%= form_for :room, url: rooms_path do \f\ %> <!--needs to be changed--!>
+
+    <p>
+        <%= f.label :rcode %><br>
+        <%= f.text_field :rcode %>
+    </p>
+    
+    <p>
+        <% f.label :apassword %><br>
+        <%= f.text_field :apassword %>
+    </p>
+    
+    <p> <!--buttons--!>
+        <%= f.submit %>
+    </p>
+    
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
